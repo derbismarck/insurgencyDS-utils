@@ -362,6 +362,10 @@
 		{
 			"weapon_weight"	"125"
 		}
+		"weapon_m1918bar"
+		{
+			"weapon_weight"	"125"
+		}
 		"weapon_law"
 		{
 			"weapon_weight"	"50"
@@ -373,6 +377,26 @@
 		"weapon_c4_ied"
 		{
 			"weapon_weight"	"100"
+		}
+		"weapon_hafthohlladung"
+		{
+			"weapon_weight"	"75"
+		}
+		"weapon_geballteladung"
+		{
+			"weapon_weight"	"50"
+		}
+		"weapon_m79"
+		{
+			"weapon_weight"	"50"
+		}
+		"weapon_m79_smoke"
+		{
+			"weapon_weight"	"50"
+		}
+		"weapon_m79_napalm"
+		{
+			"weapon_weight"	"50"
 		}
 		"weapon_at4"
 		{
@@ -411,9 +435,9 @@
 			"speed_prone"				"54"
 			"speed_crouch_walk"			"46"
 			"speed_crouch_run"			"108"
-			"speed_walk"				"80"
-			"speed_run"					"170"
-			"speed_sprint"				"288"
+			"speed_walk"				"70"
+			"speed_run"					"150"
+			"speed_sprint"				"350"
 			"AccelerationByWeight"
 			{
 				"60"					"6.00"
@@ -449,8 +473,8 @@
 			"StaminaMaxByWeight"
 			{
 				"60"					"120"
-				"640"					"40"
-				"750"					"15"
+				"600"					"40"
+				"750"					"0"
 			}
 			"stamina_regain"			"2.50"
 			"stamina_sprint_take"			"2.50"
@@ -473,7 +497,7 @@
 		}
 		"slide"
 		{
-			"min_sprint_time"			"1.2"
+			"min_sprint_time"			"0.75"
 			"post_sprint_grace"			"0.08"
 			
 			"DistanceByWeight"
@@ -503,13 +527,13 @@
 			"LeanSpeedByWeight"
 			{
 				"60"					"7"
-				"600"					"1"
+				"600"					"2"
 				"750"					"0.5"
 			}
 			"LeanViewModelSpeedByWeight"
 			{
 				"60"					"7"
-				"600"					"1"
+				"600"					"2"
 				"750"					"0.5"
 			}
 		}
