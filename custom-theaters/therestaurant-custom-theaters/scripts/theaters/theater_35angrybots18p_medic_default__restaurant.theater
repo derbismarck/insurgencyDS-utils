@@ -326,19 +326,22 @@
 			"AccelerationByWeight"
 			{
 				"60"					"6.00"
-				"640"					"3.50"
+				"600"					"3.50"
+				"750"					"2.50"
 			}
 			
 			"DecelerationByWeight"
 			{
 				"60"					"200.0"	// these are much higher than acceleration values because it's loss in velocity per second
-				"640"					"550.0"
+				"600"					"550.0"
+				"750"					"700.0"
 			}
 			
 			"FrictionByWeight"
 			{
 				"60"					"3.00"
-				"640"					"6.00"
+				"600"					"6.00"
+				"750"					"7.50"
 			}
 		}
 		"turning"
@@ -356,6 +359,7 @@
 			{
 				"60"					"120"
 				"640"					"40"
+				"750"					"15"
 			}
 			"stamina_regain"			"2.50"
 			"stamina_sprint_take"			"2.50"
@@ -371,6 +375,11 @@
 			"land_viewpunch_viewkick"		"1.0"
 			
 		}
+		"weight"
+		{
+			"min_weight"						"60"
+			"max_weight"						"750"
+		}
 		"slide"
 		{
 			"min_sprint_time"			"1.2"
@@ -379,13 +388,15 @@
 			"DistanceByWeight"
 			{
 				"60"					"1.2"
-				"640"					"0.3"
+				"600"					"0.3"
+				"750"					"0.1"
 			}
 			
 			"SpeedByWeight"
 			{
 				"60"					"300"
-				"640"					"150"
+				"600"					"150"
+				"750"					"100"
 			}
 		}
 		"lean"
@@ -401,12 +412,14 @@
 			"LeanSpeedByWeight"
 			{
 				"60"					"7"
-				"640"					"1"
+				"600"					"1"
+				"750"					"0.5"
 			}
 			"LeanViewModelSpeedByWeight"
 			{
 				"60"					"7"
-				"640"					"1"
+				"600"					"1"
+				"750"					"0.5"
 			}
 		}
 	}
