@@ -1,0 +1,413 @@
+"#base" "theater_35angrybots18p_medic_default_coop_shared.theater"
+
+"theater"
+{
+	"player_templates"
+	{
+		"template_combat_medic"
+		{
+			"team"						"security"
+			"print_name"				"#Squad_Combat_Medic"
+			
+			
+			"models"
+			{
+				"player"				"models/characters/security_light.mdl"
+				"viewmodel_hands"		"models/weapons/v_hands_sec_l.mdl"
+			
+				"bodygroups"
+				{
+					"kit"					"0"
+					"backpack"				"0"
+				}
+			}	
+			
+			"buy_order"
+			{
+				"gear"					"sec_light_armor"
+				"gear"					"sec_chest_rig"	
+				"gear"					"secondary_sling"
+				"weapon"				"weapon_m4a1"
+				"weapon_upgrade"        "underbarrel_foregrip_sec1"
+				"weapon_upgrade"		"optic_aimpoint"
+				"weapon"				"weapon_m9"
+				"weapon"				"weapon_defib"
+				"weapon"				"weapon_healthkit"
+				"weapon"				"weapon_m18_impact"
+			}
+			"allowed_items"
+			{
+				"gear"					"sec_light_armor"
+				"gear"					"sec_heavy_armor"
+				"gear"					"sec_chest_rig"
+				"gear"					"sec_chest_carrier"
+				"gear"					"sec_tactical_carrier"
+				"weapon"				"weapon_m18_impact" // HIGH END EXPLOSIVE
+				"weapon"				"weapon_defib" // MEDIC ONLY DEFIB
+				"weapon"				"weapon_healthkit"
+			}			
+		}
+	}
+	"player_gear"
+	{
+		"sec_light_armor"
+		{
+			"print_name"				"#gear_light_armor"
+			"print_desc"				"#gear_light_armor_desc"
+			"gear_slot"				"armor"
+			"gear_cost"				"0"
+			"gear_weight"				"128"	// 25 (2.5kg) + 75 encumbrance
+			"class_restricted"			"1"
+			
+			"DamageHitgroups"
+			{
+				"HITGROUP_HEAD"				"0.25"
+				"HITGROUP_CHEST"			"0.05"
+				"HITGROUP_STOMACH"			"0.05"
+				"HITGROUP_LEFTARM"			"0.25"
+				"HITGROUP_RIGHTARM"			"0.25"
+				"HITGROUP_LEFTLEG"			"0.25"
+				"HITGROUP_RIGHTLEG"			"0.25"
+			}
+			
+			"player_model_override"		"models/characters/security_standard.mdl"
+			"viewmodel_hands_override"	"models/weapons/v_hands_sec_m.mdl"
+			
+			"team_access"				"security"
+		}
+		"sec_heavy_armor"
+		{
+			"print_name"				"#gear_heavy_armor"
+			"print_desc"				"#gear_heavy_armor_desc"
+			"gear_slot"				"armor"
+			"gear_cost"				"0"
+			"gear_weight"				"256"
+			"class_restricted"			"1"
+			
+			"DamageHitgroups"
+			{
+				"HITGROUP_HEAD"				"0.10"
+				"HITGROUP_CHEST"			"0.025"
+				"HITGROUP_STOMACH"			"0.025"
+				"HITGROUP_LEFTARM"			"0.10"
+				"HITGROUP_RIGHTARM"			"0.10"
+				"HITGROUP_LEFTLEG"			"0.10"
+				"HITGROUP_RIGHTLEG"			"0.10"
+			}
+			
+			"player_model_override"		"models/characters/security_heavy.mdl"
+			"viewmodel_hands_override"	"models/weapons/v_hands_sec_h.mdl"
+			
+			"team_access"				"security"
+		}
+
+		"sec_chest_rig"
+		{
+			"print_name"				"#gear_chest_rig"
+			"print_desc"				"#gear_chest_rignew_desc"
+			"gear_slot"				"vest"
+			"gear_cost"				"1"
+			"gear_weight"				"64"	// 22 (2.2kg) + 24 encumbrance
+			"class_restricted"			"1"
+			
+			"extra_ammo"
+			{
+				"primary"				"2"
+				"secondary"				"2"
+				"explosive"				"0"
+			}
+			"weapon_slots"
+			{
+				"explosive"				"1"
+			}
+			"team_access"				"security"
+		}
+		"sec_chest_carrier"
+		{
+			"print_name"				"#gear_chest_carrier"
+			"print_desc"				"#gear_chest_carriernew_desc"
+			"gear_slot"				"vest"
+			"gear_cost"				"2"
+			"gear_weight"				"128"	// 50 (5.0kg) + 50 encumbrance
+			"class_restricted"			"1"
+			
+			"extra_ammo"
+			{
+				"primary"				"4"
+				"secondary"				"4"
+				
+				"explosive"
+				{
+					"6"		"3" // an extra explosive in the second slot only, sub-slots are 0 indexed
+				}
+			}
+			"weapon_slots"
+			{
+				"explosive"				"2"
+			}
+			"player_model_bodygroups"
+			{
+				"kit"					"1"
+				"backpack"				"0"
+			}			
+			"team_access"				"security"
+		}
+		"sec_tactical_carrier"
+		{
+			"print_name"				"#gear_tactical_carrier"
+			"print_desc"				"#gear_tactical_carrier_desc"
+			"gear_slot"				"vest"
+			"gear_cost"				"3"
+			"gear_weight"				"256"	// 50 (5.0kg) + 50 encumbrance
+			"class_restricted"			"1"
+			
+			"extra_ammo"
+			{
+				"primary"				"8"
+				"secondary"				"8"
+				
+				"explosive"
+				{
+					"8"		"4" // an extra explosive in the second slot only, sub-slots are 0 indexed
+				}
+			}
+			"weapon_slots"
+			{
+				"explosive"				"3"
+			}
+			"player_model_bodygroups"
+			{
+				"kit"					"2"
+				"backpack"				"1"
+			}			
+			"team_access"				"security"
+		}
+	}
+	"teams"
+	{
+		"security"
+		{
+			"squads"
+			{
+				// assault squad
+				"#Fireteam_Alpha"	// small arms
+				{
+					"#Squad_Fireteam_WeaponsSgt"			"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"					
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+				}
+
+				// assault squad
+				"#Fireteam_Bravo"	// small arms
+				{
+					"#Squad_Fireteam_WeaponsSgt"			"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"						
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+				}	
+				
+				// assault squad
+				"#Fireteam_Charlie"	// small arms
+				{
+					"#Squad_Fireteam_WeaponsSgt"			"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"					
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+					"#Squad_Fireteam_WeaponsSpecialist"		"template_combat_medic"
+				}							
+							
+			}
+		}
+		
+		
+		"insurgents"
+		{
+			"squads"
+			{
+				"#Cell_Alpha"	// assault team #1
+				{
+					// role name								preset
+					"#Squad_Cell_Leader_Specialist"			"template_coop_specialist"	// Smoke
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// Incendiary
+					"#Squad_Cell_SubmachineGunner"			"template_coop_submachinegunner"	// Incendiary
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// Incendiary
+					"#Squad_Cell_SubmachineGunner"			"template_coop_submachinegunner"	// Incendiary
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// Frag
+					"#Squad_Cell_Sapper"					"template_coop_sapper"	// RPG
+					"#Squad_Cell_HeavyGunner"				"template_coop_heavygunner"	// Frag
+				}
+				
+				"#Cell_Bravo"	// assault team #2
+				{
+					// role name								preset
+					"#Squad_Cell_Leader_Specialist"			"template_coop_specialist"	// smokes
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_SubmachineGunner"			"template_coop_submachinegunner"	// incendiary
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// Frag
+					"#Squad_Cell_SharpShooter"				"template_coop_sharpshooter"	// smokes
+					"#Squad_Cell_Sapper"					"template_coop_sapper"	// incendiary
+					"#Squad_Cell_Sapper"					"template_coop_sapper"	// RPG
+					"#Squad_Cell_SharpShooter"				"template_coop_sharpshooter"	// Frag
+				}
+				
+				"#Cell_Charlie"	// support team
+				{
+					// role name								preset
+					"#Squad_Cell_Leader_Specialist"			"template_coop_specialist"	// smokes
+					"#Squad_Cell_Specialist"				"template_coop_specialist"	// incendiary
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_HeavyGunner"				"template_coop_heavygunner"	// Frag
+					"#Squad_Cell_SubmachineGunner"			"template_coop_submachinegunner"	// incendiary
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// Frag
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// Frag
+					"#Squad_Cell_SharpShooter"				"template_coop_sharpshooter"	// Frag
+				}
+				
+				"#Cell_Delta"	// heavy weapons team
+				{
+					// role name								preset
+					"#Squad_Cell_Leader_Specialist"			"template_coop_specialist"	// smokes
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// RPG
+					"#Squad_Cell_Specialist"				"template_coop_specialist"	// smokes
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_SharpShooter"				"template_coop_sharpshooter"	// Frag
+				}
+				
+				"#Cell_Echo"
+				{
+					// role name								preset
+					"#Squad_Cell_Leader_Specialist"			"template_coop_specialist"	// smokes
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// RPG
+					"#Squad_Cell_Specialist"				"template_coop_specialist"	// smokes
+					"#Squad_Cell_Sapper"					"template_coop_sapper"	// RPG
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_SharpShooter"				"template_coop_sharpshooter"	// Frag
+				}
+				
+				"#Cell_Foxtrot"
+				{
+					// role name								preset
+					"#Squad_Cell_Leader_Specialist"			"template_coop_specialist"	// smokes
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_Fighter"					"template_coop_fighter"	// incendiary
+					"#Squad_Cell_MachineGunner"				"template_coop_machinegunner"	// RPG
+					"#Squad_Cell_Specialist"				"template_coop_specialist"	// smokes
+					"#Squad_Cell_HeavyGunner"				"template_coop_heavygunner"	// RPG
+					"#Squad_Cell_SubmachineGunner"			"template_coop_submachinegunner"	// incendiary
+					"#Squad_Cell_SharpShooter"				"template_coop_sharpshooter"	// Frag
+				}
+			}
+		}
+	}
+	"player_settings"
+	{
+		"speed"
+		{
+			"frac_side_move"			"0.60"
+			"frac_back_move"			"0.65"
+			"frac_side_step"			"0.6"
+			"speed_prone"				"54"
+			"speed_crouch_walk"			"46"
+			"speed_crouch_run"			"108"
+			"speed_walk"				"80"
+			"speed_run"					"170"
+			"speed_sprint"				"288"
+			"AccelerationByWeight"
+			{
+				"60"					"6.00"
+				"640"					"3.50"
+			}
+			
+			"DecelerationByWeight"
+			{
+				"60"					"200.0"	// these are much higher than acceleration values because it's loss in velocity per second
+				"640"					"550.0"
+			}
+			
+			"FrictionByWeight"
+			{
+				"60"					"3.00"
+				"640"					"6.00"
+			}
+		}
+		"turning"
+		{
+			"frac_turn_sprint"			"0.85"
+			"frac_turn_lean"			"0.95"
+			"frac_turn_crawl"			"0.5"
+			"frac_turn_prone_limit"		"0.0"
+			"prone_yaw_limit_amount"	"80"
+			"prone_yaw_limit_approach"	"20"
+		}
+		"stamina"
+		{
+			"StaminaMaxByWeight"
+			{
+				"60"					"120"
+				"640"					"40"
+			}
+			"stamina_regain"			"2.50"
+			"stamina_sprint_take"			"2.50"
+			"stamina_jump_take"			"15"
+			"stamina_dmg_take"			"0.25"
+			
+			"land_viewpunch_minvel"			"150"
+			"land_viewpunch_basepitch"		"0.75"
+			"land_viewpunch_jumppitch"		"0.05"
+			"land_viewpunch_landpitch"		"0.01"
+			"land_viewpunch_maxangle"		"50.0"
+			"land_viewpunch_freeaim"		"1.0"
+			"land_viewpunch_viewkick"		"1.0"
+			
+		}
+		"slide"
+		{
+			"min_sprint_time"			"1.2"
+			"post_sprint_grace"			"0.08"
+			
+			"DistanceByWeight"
+			{
+				"60"					"1.2"
+				"640"					"0.3"
+			}
+			
+			"SpeedByWeight"
+			{
+				"60"					"300"
+				"640"					"150"
+			}
+		}
+		"lean"
+		{
+			"lean_left_offset_stance"		"14 11 8"
+			"lean_right_offset_stance"		"27 25 8"
+			"lean_left_moving_offset_stance"	"8 5 4"
+			"lean_right_moving_offset_stance"	"12 8 6"
+			"lean_roll_offset_stance"		"10"
+			"lean_down_offset_stance"		"11"
+			"lean_down_offset_stance_crouch"	"2"
+			
+			"LeanSpeedByWeight"
+			{
+				"60"					"7"
+				"640"					"1"
+			}
+			"LeanViewModelSpeedByWeight"
+			{
+				"60"					"7"
+				"640"					"1"
+			}
+		}
+	}
+}
