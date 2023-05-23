@@ -392,13 +392,13 @@
 		"rocket_rpg7"
 		{
 			"DetonateDamage"			"250"
-			"DetonateDamageRadius"			"500"
-			"DetonatePenetrationRadius"		"50"
+			"DetonateDamageRadius"		"500"
+			"DetonatePenetrationRadius"	"50"
 			"RocketTopSpeed"			"3500"
 			"RocketStartSpeed"			"200"
-			"RocketAcceleration"			"400"
+			"RocketAcceleration"		"400"
 			"RocketWobble"				"1"
-			"RocketWobbleFrequency"			"0.25"
+			"RocketWobbleFrequency"		"0.25"
 		}
 	}
 	"player_settings"
