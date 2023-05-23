@@ -12,8 +12,8 @@
 			
 			"models"
 			{
-				"player"				"models/characters/security_light.mdl"
-				"viewmodel_hands"		"models/weapons/v_hands_sec_l.mdl"
+				"player"						"models/characters/civilian_vip_security.mdl"
+				"viewmodel_hands"				"models/weapons/v_hands_vip.mdl"
 			
 				"bodygroups"
 				{
@@ -39,6 +39,7 @@
 			{
 				"gear"					"sec_light_armor"
 				"gear"					"sec_heavy_armor"
+				"gear"					"sec_juggernaut_armor"
 				"gear"					"sec_chest_rig"
 				"gear"					"sec_chest_carrier"
 				"gear"					"sec_tactical_carrier"
@@ -70,8 +71,8 @@
 				"HITGROUP_RIGHTLEG"			"0.25"
 			}
 			
-			"player_model_override"		"models/characters/security_standard.mdl"
-			"viewmodel_hands_override"	"models/weapons/v_hands_sec_m.mdl"
+			"player_model_override"		"models/characters/security_light.mdl"
+			"viewmodel_hands_override"	"models/weapons/v_hands_sec_l.mdl"
 			
 			"team_access"				"security"
 		}
@@ -93,6 +94,31 @@
 				"HITGROUP_RIGHTARM"			"0.10"
 				"HITGROUP_LEFTLEG"			"0.10"
 				"HITGROUP_RIGHTLEG"			"0.10"
+			}
+			
+			"player_model_override"		"models/characters/security_standard.mdl"
+			"viewmodel_hands_override"	"models/weapons/v_hands_sec_m.mdl"
+			
+			"team_access"				"security"
+		}
+		"sec_juggernaut_armor"
+		{
+			"print_name"				"FORT Armor"
+			"print_desc"				"An extremely heavy and impractical bombsuit-esque armor set"
+			"gear_slot"				"armor"
+			"gear_cost"				"0"
+			"gear_weight"				"512"
+			"class_restricted"			"1"
+			
+			"DamageHitgroups"
+			{
+				"HITGROUP_HEAD"				"0.025"
+				"HITGROUP_CHEST"			"0.010"
+				"HITGROUP_STOMACH"			"0.010"
+				"HITGROUP_LEFTARM"			"0.025"
+				"HITGROUP_RIGHTARM"			"0.025"
+				"HITGROUP_LEFTLEG"			"0.025"
+				"HITGROUP_RIGHTLEG"			"0.025"
 			}
 			
 			"player_model_override"		"models/characters/security_heavy.mdl"
