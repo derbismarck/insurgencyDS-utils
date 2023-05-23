@@ -310,6 +310,57 @@
 			}
 		}
 	}
+	"weapons"
+	{
+		"weapon_pecheneg"
+		{
+			"weapon_weight"	"200"
+		}
+		"weapon_m240"
+		{
+			"weapon_weight"	"200"
+		}
+		"weapon_mg42"
+		{
+			"weapon_weight"	"200"
+		}
+		"weapon_m249"
+		{
+			"weapon_weight"	"175"
+		}
+		"weapon_mk46"
+		{
+			"weapon_weight"	"150"
+		}
+		"weapon_rpk"
+		{
+			"weapon_weight"	"125"
+		}
+		"weapon_law"
+		{
+			"weapon_weight"	"50"
+		}
+		"weapon_panzerfaust"
+		{
+			"weapon_weight"	"100"
+		}
+		"weapon_c4_ied"
+		{
+			"weapon_weight"	"100"
+		}
+		"weapon_at4"
+		{
+			"weapon_weight"	"150"
+		}
+		"weapon_rpg7"
+		{
+			"weapon_weight"	"150"
+		}
+		"weapon_bazooka"
+		{
+			"weapon_weight"	"200"
+		}
+	}
 	"player_settings"
 	{
 		"speed"
