@@ -342,9 +342,13 @@
 		{
 			"weapon_weight"	"200"
 		}
+		"weapon_m60"
+		{
+			"weapon_weight"	"225"
+		}
 		"weapon_m240"
 		{
-			"weapon_weight"	"200"
+			"weapon_weight"	"225"
 		}
 		"weapon_mg42"
 		{
@@ -360,7 +364,7 @@
 		}
 		"weapon_rpk"
 		{
-			"weapon_weight"	"125"
+			"weapon_weight"	"100"
 		}
 		"weapon_m1918bar"
 		{
